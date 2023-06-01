@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-# This notebook analyses the database containing the carbazole derivatives
+# This programme analyses the database containing the carbazole derivatives
 # The neccessary modules an csv. data are imported 
 import pandas as pd
 import numpy as np
@@ -13,9 +10,6 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv('carbazole derivatives from using a dictionary.csv')
 print(data)
-
-
-# In[2]:
 
 
 # The HOMO and LUMO data is plotted as a histogram using the seaborn and matplotlab modules
@@ -34,9 +28,6 @@ ax.set_xlim(-12, 2)
 
 ax.set(title='Distribution of HOMO and LUMO Energies in Dataset', xlabel="Energy (eV)", ylabel="Frequency")
 ax.legend(loc='upper right', labels=['HOMO', 'LUMO'])
-
-
-# In[3]:
 
 
 # The histogram is normalised by setting the stat to density so that it can be compared to the histogram for the 
@@ -60,9 +51,6 @@ ax.legend(loc='upper right', labels=['HOMO', 'LUMO'])
 plt.show()
 
 
-# In[4]:
-
-
 # The columns containing the energy levels of the three singlet states are imported and stored as variables.
 # The variables containing the singlet energy data are plotted on a histogram and normalised 
 s1 = data['E(S1)']
@@ -83,12 +71,7 @@ for singlet2 in [s2]:
 for singlet3 in [s1]:
     sns.histplot(singlet3, bins = range(-1, 6, 1), ax = ax, kde = True, legend = True, color = "orange", stat = "density")
 
-
-    
 ax.legend(loc = 'upper right', labels=['E(S1)', 'E(S2)', 'E(S3)'], title = 'Singlet Energy Level')
-
-
-# In[5]:
 
 
 # The columns containing the oscillating strengths for each of the singlet states are imported and stored as variables.
@@ -111,12 +94,7 @@ for field2 in [f2]:
 for field3 in [f1]:
     sns.histplot(field3, bins = range(0, 6, 1), ax = ax, kde = True, legend = True, color = "purple", stat="density")
 
-
-    
 ax.legend(loc = 'upper right', labels=['f(S1)', 'f(S2)', 'f(S3)'], title = 'Singlet Energy Level')
-
-
-# In[6]:
 
 
 # The columns containing the energy levels of the three triplet states are imported and stored as variables.
@@ -143,9 +121,6 @@ ax.set(title='Distribution of Triplet Energy Levels in Carbazole Derivatives', x
 ax.legend(loc='upper right', labels=['E(T1)', 'E(T2)', 'E(T3)'], title='Triplet Energy Level')
 
 
-# In[10]:
-
-
 # S1-T2 gap
 
 T2_gap = data['S1-T2 gap']
@@ -155,10 +130,6 @@ sns.histplot(T2_gap, bins = range(0, 4, 1), ax = ax, kde = True, color = "#9A6FF
 ax.set_ylim(0, 2.0)
 ax.set_xlim(-0.15, 3.00)
 
-
-# In[9]:
-
-
 # The values for the S1-T1 gap are plotted on a histogram and normalised
 energy_gap = data['S1-T1 gap']
 print(energy_gap)
@@ -167,11 +138,7 @@ fig, ax=plt.subplots()
 
 sns.histplot(energy_gap, bins = range(0, 4, 1), ax = ax, kde = True, color = "#75FF94", stat = "density").set(title='Distribution of \u0394E(S1-T1) in Carbazole Derivatives', xlabel = "Energy (eV)", ylabel = "Density")
     
-
-
-# In[11]:
-
-
+    
 # The values for the HOMO-LUMO gap are plotted on a histogram and normalised
 HOMO_LUMO = data['HOMO-LUMO Gap']
 print(HOMO_LUMO)
@@ -179,10 +146,6 @@ print(HOMO_LUMO)
 fig, ax=plt.subplots()
 sns.histplot(HOMO_LUMO, bins = range(0, 9, 1), ax = ax, kde = True, color = "orange", stat="density").set(title='Distribution of HOMO-LUMO gap in Carbazole Derivatives', xlabel = "Energy (eV)", ylabel = "Density")
     
-
-
-# In[10]:
-
 
 # The singlet fission rule is now tested on the carbazole derivatives
 # The carbazole S1 and T1 values are stored in variables and the deviation is set to 1
@@ -206,15 +169,8 @@ for i, t1 in enumerate(t1_list):
         smiles_list.append(smiles_list_all[i])
     
 
-
-# In[22]:
-
-
 # The smiles_list is printed
 print(smiles_list)
-
-
-# In[24]:
 
 
 # As these SMILES were edited to create the .xyz files and to visualise the molecule the full smile is needed, 
@@ -299,9 +255,6 @@ data['res'] = res_list
 data.to_csv('carbazole derivatives from using a dictionary.csv', index=False)
 
 
-# In[20]:
-
-
 # After running the above programme, 214 .xyz files were genereated 
 # However, there were 285 carbazole derivatives in the database 
 # This programme checks for duplicateds in the database to account for this difference
@@ -322,10 +275,7 @@ else:
     print(f"There are no values with exactly {duplicates} duplicates in the 'SMILES' column.")
 
 
-# In[11]:
-
-
-# There are also two moluecuels that appear five times in the database, as shown here
+# There are also two molecules that appear five times in the database, as shown here
 SMILES_data = data['SMILES']
 df = pd.DataFrame({'SMILES': SMILES_data})
 duplicates = 5
@@ -335,7 +285,7 @@ duplicates = 5
 duplicate_counts = df.value_counts()
 exact_duplicates = duplicate_counts[duplicate_counts == 5]
 
-# 
+
 if len(exact_duplicates) > 0:
     print("There are", len(exact_duplicates), "values with exactly five duplicates in the 'SMILES' column:")
     print(exact_duplicates)
@@ -343,16 +293,10 @@ else:
     print(f"There are no values with exactly {duplicates} duplicates in the 'SMILES' column.")
 
 
-# In[15]:
-
-
 # The moleucles that passed the code creating the .xyz files are printed 
 print('Items that pass:', pass_list)
 
 print(len(pass_list))
-
-
-# In[ ]:
 
 
 # This programme creates a folder for each file in a directory and moves the file into the new folder
