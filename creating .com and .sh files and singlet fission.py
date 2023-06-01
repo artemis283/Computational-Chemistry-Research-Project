@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[32]:
-
-
 # This programme uses the singlet fission rule to check for guest-host matches in the database
 # Pandas, numpy, seaborn and matplotlib are imported and the database is read using pandas
 import pandas as pd
@@ -35,15 +32,8 @@ for i, t1 in enumerate(t1_list):
         smiles_list.append(smiles_list_all[i])
 
 
-# In[33]:
-
-
 # smiles_list is printed
 print(smiles_list)
-
-
-# In[3]:
-
 
 # rdkit is imported and this programme takes a molecule's SMILES as an input to visualise the molecule
 # this molecule satisfies the singlet fission rule with the smallest tolerance of 0.0002
@@ -60,159 +50,8 @@ ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
 
-# In[9]:
-
-
-# FC(F)(F)c1c2cc3ccccc3cc2c(c2cc3ccccc3cc12)C(F)(F)F
-
-from rdkit import Chem
-
-subArr = ['FC(F)(F)c1c2cc3ccccc3cc2c(c2cc3ccccc3cc12)C(F)(F)F']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[10]:
-
-
-# CCSC1=C2C(=S=C(SCC)C2=C(S1)SC(C)(C)C)SC(C)(C)C
-
-from rdkit import Chem
-
-subArr = ['CCSC1=C2C(=S=C(SCC)C2=C(S1)SC(C)(C)C)SC(C)(C)C']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[11]:
-
-
-from rdkit import Chem
-
-subArr = ['CC(C)[Si](C#CC1=C2Oc3cccc(C#N)c3N=C2C(=C2Oc3cccc(C#N)c3N=C12)C#C[Si](C(C)C)(C(C)C)C(C)C)(C(C)C)C(C)C']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[12]:
-
-
-from rdkit import Chem
-
-subArr = ['c1ccc(cc1)c1c2ccccc2c(c2ccccc2)c2nc3c(nc12)c(c1ccccc1)c1ccccc1c3c1ccccc1']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[13]:
-
-
-from rdkit import Chem
-
-subArr = ['CCCCN1C(Sc2ccccc12)=CC1=C([O-])C(=CC2=[N+](CCCC)c3ccccc3S2)C1=C(C#N)C#N']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[14]:
-
-
-from rdkit import Chem
-
-subArr = ['CN(C)c1ccc(cc1)N=[NH+]c1ccc(cc1)S(=O)(=O)[O-]']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[15]:
-
-
-from rdkit import Chem
-
-subArr = ['CCCCCCCCN1C(=[Se]c2ccccc12)C=C1C(=O)C(=CC2=[Se]c3ccccc3N2CCCCCCCC)C1=C(C#N)C#N']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[16]:
-
-
-from rdkit import Chem
-
-subArr = ['COc1cc2CCN3N(NC(=C3c2cc1OC)C#N)c1ccccc1']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[17]:
-
-
-from rdkit import Chem
-
-subArr = ['CN1C(=C(c2ccccc12)C1=C(C2=C(C)SC(=C2)c2cccc(c2)C(F)(F)F)C(F)(F)C(F)(F)C1(F)F)C']
-lists_subgroup = []
-for j in subArr:
-    lists_subgroup.append(Chem.MolToSmiles(Chem.MolFromSmiles(j)))
-
-
-print('smiiiiy: ',lists_subgroup[0])
-ver = Chem.MolFromSmiles(lists_subgroup[0])
-ver
-
-
-# In[8]:
-
-
-# This script generates .com files and submission scripts for Gaussian calculations from .xyz files
-# It adds the .com files and submission scripts to the same directory as the .xyz files
+# This script generates two .com files and a submission script for Gaussian16 calculations, from the .xyz files
+# It adds the .com files and submission script to the same directory as the .xyz files
 import glob, os, shutil
 
 xyz_dir = '/Users/artemiswebster/Downloads/carbazole_structures'
@@ -301,10 +140,6 @@ g16 {single_com_path}
 
     print(f"sub contents: {sub_contents}")
 
-
-# In[9]:
-
-
 # This programme moves the .sh files into the correct folder
 # It also removes the .sh file if it already exists in the folder
 # This is so that each calculation can be run on guassian in its own directory for each molecule
@@ -320,10 +155,3 @@ for filename in os.listdir('/Users/artemiswebster/Downloads/carbazole_structures
     else: 
         foldername = filename
         print(f"Foldername: {foldername}")
-
-
-# In[ ]:
-
-
-
-
