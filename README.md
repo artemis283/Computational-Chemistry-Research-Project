@@ -16,6 +16,7 @@ Upon geometry optimisation at the T1 minima, five Cz derivatives were found that
 Thus, this thesis has been successful in analysing a database of organic semiconductors, containing compounds that are stable in solid state whose electronic properties were not recorded for a specific purpose, making it unbiased with respect to application.24 For this reason, the five Cz derivatives that have been proposed as a suitable dopant in the Cz host- dopant system provide a novel suggestion in the RTP field as they have not been suggested for this purpose previously. Furthermore, an innovative insight into organic compounds for RTP photoluminescence applications has been achieved, and we hope to continue making break throughs in further explorations.
 
 References (Royal Society of Chemistry format):
+
 F. J. Hernández and R. Crespo-Otero, J. Mater. Chem. C, 2021, 9, 11882–11892
 O. Omar, T. Nematiaram, A. Troisi and D. Padula, Organic Materials Repurposing, https://datacat.liverpool.ac.uk/1472/, (accessed May 2023)
 Q. Sun, J. Ren, Q. Peng, Z Shuai, 2021, Research Square: https://assets.researchsquare.com/files/rs2520159/v1/d16e6bd7d2c450c8db398934.pdf?c=1676443353 (accessed May 2023)
