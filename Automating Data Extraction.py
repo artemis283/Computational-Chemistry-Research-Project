@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
-
-
 # This programme extracts the excited state T1 value from a Gaussian log file from a geormetry optimisation
 # It then writes the T1 value to a csv file along with the file path of the log file
 
@@ -66,10 +63,6 @@ outputPath = '/Users/artemiswebster/Downloads/carbazole_structures/T1_output.csv
 # The function is called
 findT1Gauss(parentPath, outputPath)
 
-
-# In[13]:
-
-
 # This programme follows the same logic as the programme above but extracts the S1 value from the log file
 # As the singlet value is not always at the same excited sate, the programme searches for the line containing the
 # singlet value and then extracts the value from the line. The value is then written to a csv file along with the
@@ -124,10 +117,3 @@ outputPath = '/Users/artemiswebster/Downloads/carbazole_structures/S1_output.csv
 
 # The function is called
 findS1Gauss(parentPath, outputPath)
-
-
-# In[ ]:
-
-
-
-
