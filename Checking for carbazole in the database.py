@@ -1,13 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[7]:
-
-
 # This programme checks for carbazole derivatives in the data base of semiconductors 
 # If a derivative is found it is added to a new database, if the molecule cannot be kekulized, it is added to a list
-# This programme was ran a number of times as it required a lot of processing power so the molecules in the database 
-# were tested in batches
+# This programme was ran a number of times as it required a lot of processing power so the molecules in the database were tested in batches
 # Molecules 0 - 1999
 # RDKit is imported along with its submodules and pandas and numpy
 from rdkit import Chem
@@ -156,9 +152,6 @@ cannot_kekulize_data_frame = data_frame[data_frame['SMILES'].isin(cannot_kekuliz
 cannot_kekulize_data_frame.to_csv('cannot kekulize list.csv', header=True, index=False)
 
 
-# In[9]:
-
-
 # Molecules 2000 - 4999
 from rdkit import Chem
 import rdkit.Chem.AllChem as AllChem
@@ -279,13 +272,6 @@ carbazole_data_frame = data_frame[data_frame['SMILES'].isin(carbazole_list)]
 
 with open('carbazole derivatives from using a dictionary.csv', 'a') as f:
     carbazole_data_frame.to_csv(f, header=False, index=False)
-    
-
-
-
-
-
-# In[10]:
 
 
 # Molecules 5000 - 14999
@@ -409,12 +395,6 @@ carbazole_data_frame = data_frame[data_frame['SMILES'].isin(carbazole_list)]
 with open('carbazole derivatives from using a dictionary.csv', 'a') as f:
     carbazole_data_frame.to_csv(f, header=False, index=False)
     
-
-
-
-
-# In[11]:
-
 
 # Molecules 15000 - 24999
 from rdkit import Chem
@@ -542,10 +522,8 @@ cannot_kekulize_data_frame = data_frame[data_frame['SMILES'].isin(cannot_kekuliz
 
 with open('cannot kekulize list.csv', 'a') as f2:
     cannot_kekulize_data_frame.to_csv(f2, header=False, index=False)
-
-
-# In[16]:
-
+    
+    
 
 # This programme used rdkit to visualise one of the derivatives found as a test to see if it contains carbazole
 # O=C1N(C(=O)c2ccccc12)c1ccc2Nc3ccccc3c2c1
@@ -561,10 +539,3 @@ for j in subArr:
 print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
-
-
-# In[ ]:
-
-
-
-
