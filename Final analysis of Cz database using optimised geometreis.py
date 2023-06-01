@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-# Importing necessary modules and S1 data, printing data and checking the length
-
+# Importing necessary modules and singlet excited state (S1) data, printing data and checking the length
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -19,10 +15,6 @@ S1_SMILES = S1_data['SMILE']
 
 len(S1_values)
 
-
-# In[2]:
-
-
 # Importing T1 data, printing data and checking the length
 T1_data = pd.read_csv('T1_output copy.csv')
 print(T1_data)
@@ -31,9 +23,6 @@ T1_values = T1_data['Optimized T1 (eV)']
 T1_SMILES = T1_data['SMILE']
 
 len(T1_values)
-
-
-# In[3]:
 
 
 # Plotting a line graph for all of the derivatives in the S1 and T1 databases
@@ -54,8 +43,6 @@ ax.tick_params(bottom=True, left=True)
 plt.plot([], linestyle='-')
 plt.show()
 
-
-# In[4]:
 
 
 # Testing the singlet fission rule on optimised geometries
@@ -80,14 +67,8 @@ for i, t1 in enumerate(t1_list):
         smiles_list.append(smiles_list_all[i])
 
 
-# In[5]:
-
-
 # The smiles_list is printed, to show the molecules that satisfy the critera
 print(smiles_list)
-
-
-# In[6]:
 
 
 # First moleucle that staisfies heterofission mechanism: Oc1cccc2cccCCCNN3c4ccccc4c4ccccc34nc12
@@ -105,9 +86,6 @@ ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
 
-# In[7]:
-
-
 # Second moleucle that staisfies heterofission mechanism: CC1(C)OC(=C(C#N)C#N)C(=C1C=Cc1ccc(cc1)N1c2ccccc2c2ccccc12)C#N
 
 from rdkit import Chem
@@ -123,10 +101,6 @@ print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
-
-# In[8]:
-
-
 # Third moleucle that staisfies heterofission mechanism: N#CC(=Cc1cccc2ccccc12)N1c2ccccc2c2ccccc12
 from rdkit import Chem
 
@@ -141,10 +115,6 @@ print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
-
-# In[9]:
-
-
 # Fourth moleucle that staisfies heterofission mechanism: BrC1=CC=C(C=CN2c3ccccc3c3ccccc23)C2=NSN=C12
 from rdkit import Chem
 
@@ -157,10 +127,6 @@ for j in subArr:
 print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
-
-
-# In[10]:
-
 
 # Fifth moleucle that staisfies heterofission mechanism: COC(=O)C(C#Cc1ccc(cc1)N1c2ccccc2c2ccccc12)=C(C#Cc1ccc(cc1)N1c2ccccc2c2ccccc12)C(=O)OC
 from rdkit import Chem
@@ -176,9 +142,6 @@ ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
 
-# In[11]:
-
-
 # Sixth moleucle that staisfies heterofission mechanism: COc1ccc(C=Nc2ccc(cc2)N2c3ccccc3c3ccccc23)c(O)c1
 
 subArr = ['COc1ccc(C=Nc2ccc(cc2)N2c3ccccc3c3ccccc23)c(O)c1']
@@ -190,10 +153,6 @@ for j in subArr:
 print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
-
-
-# In[12]:
-
 
 # Seventh moleucle that staisfies heterofission mechanism: c1ccc(cc1)C(=Cc1ccc(cc1)N1c2ccccc2c2ccccc12)c1ccncc1
 
@@ -208,9 +167,6 @@ ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
 
-# In[13]:
-
-
 # Eighth moleucle that staisfies heterofission mechanism: COc1ccc(cc1)C1=NN=C(S1)N=Cc1ccc(cc1)N1c2ccccc2c2ccccc12
 
 subArr = ['COc1ccc(cc1)C1=NN=C(S1)N=Cc1ccc(cc1)N1c2ccccc2c2ccccc12']
@@ -223,10 +179,6 @@ print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
-
-# In[55]:
-
-
 # Ninth moleucle that staisfies heterofission mechanism: c1ccc(cc1)C=CC(=Cc1ccccc1)N1c2ccccc2c2ccccc12
 
 subArr = ['c1ccc(cc1)C=CC(=Cc1ccccc1)N1c2ccccc2c2ccccc12']
@@ -238,9 +190,6 @@ for j in subArr:
 print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
-
-
-# In[56]:
 
 
 # Tenth moleucle that staisfies heterofission mechanism: N#CC(C#N)=C(N1c2ccccc2c2ccccc12)C(c1ccccc1)=C(C#N)C#N
@@ -256,9 +205,6 @@ ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
 
-# In[57]:
-
-
 # Eleventh moleucle that staisfies heterofission mechanism: c1ccc(C=Nc2ccc(C=Cc3ccc(cc3)N3c4ccccc4c4ccccc34)cc2)nc1
 
 subArr = ['c1ccc(C=Nc2ccc(C=Cc3ccc(cc3)N3c4ccccc4c4ccccc34)cc2)nc1']
@@ -271,8 +217,6 @@ print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
-
-# In[58]:
 
 
 # The carbazole S1 and T1 values are stored in variables and the tolerance is set to 0.2, to test a smaller deviation
@@ -296,13 +240,7 @@ for i, t1 in enumerate(t1_list):
         smiles_list.append(smiles_list_all[i])
 
 
-# In[59]:
-
-
 print(smiles_list)
-
-
-# In[60]:
 
 
 # Molecules that satisty the heterofission mechanism with a 0.2 deviation:
@@ -318,10 +256,6 @@ print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
-
-# In[61]:
-
-
 # N#CC(=Cc1cccc2ccccc12)N1c2ccccc2c2ccccc12
 
 subArr = ['N#CC(=Cc1cccc2ccccc12)N1c2ccccc2c2ccccc12']
@@ -334,8 +268,6 @@ print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
 
-
-# In[62]:
 
 
 # N#CC(C#N)=C(N1c2ccccc2c2ccccc12)C(c1ccccc1)=C(C#N)C#N
@@ -350,10 +282,6 @@ for j in subArr:
 print('smiiiiy: ',lists_subgroup[0])
 ver = Chem.MolFromSmiles(lists_subgroup[0])
 ver
-
-
-# In[14]:
-
 
 # Plotting a line graph for the molecuels that satisfy the heterofission mechanism with a 0.65 deviation
 import pandas as pd
@@ -393,10 +321,6 @@ plt.plot([], linestyle='-')
 plt.show()
 
 
-
-# In[64]:
-
-
 # Host and guest T1 energy scatter graph with the molecuels that satisfy the heterofission mechanism with a 0.65 devation
 # Carbazole is shown in red 
 
@@ -417,11 +341,8 @@ plt.tick_params(axis='both', which='major', labelsize=16)
 plt.show()
 
 
-# In[65]:
-
-
-# Host and guest T1 energy scatter graph with all of the Cz derivatives that the calculations have been run on
-# Carbazole is shown in red
+# Host and guest T1 energy scatter graph with all of the Cz derivatives that the calculations have been run on carbazole is shown 
+# in red
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -437,9 +358,6 @@ plt.show()
 
 print(x)
 print(T1_values)
-
-
-# In[149]:
 
 
 # Finding the difference of the S1 Host - T1 host - T1 guest so it can be used in a table
@@ -463,10 +381,7 @@ for i, t1 in enumerate(t1_list):
 print(difference_list)
 
 
-# In[1]:
-
-
-# Plotting a line graph for the top 5 Cz derivatives molecuels that satisfy the heterofission mechanism
+# Plotting a line graph for the top 5 Cz derivatives molecuels that satisfy the heterofission mechanism with Cz as the 6th molecule
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -502,10 +417,3 @@ ax.set_xlim(-0.5, len(smiles_list_T1_values)-0.5)
 
 plt.plot([], linestyle='-')
 plt.show()
-
-
-# In[ ]:
-
-
-
-
