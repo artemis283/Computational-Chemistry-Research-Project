@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 # This programme follows the same logic as the file titled, 'Checking for carbazole in the database'
 # Due to the large number of molecules, the programme had to be run seperately and in a different file for the 
 # second half of the database.
@@ -134,11 +131,9 @@ with open('cannot kekulize list.csv', 'a') as f2:
     cannot_kekulize_data_frame.to_csv(f2, header=True, index=False)
 
 
-# In[2]:
 
 
 # Molecules 35000 - 44999
-
 def kekulize(mol):
     """
     Kekulize aromatic bonds in the given molecule.
@@ -251,10 +246,6 @@ carbazole_data_frame = data_frame[data_frame['SMILES'].isin(carbazole_list)]
 with open('carbazole derivatives from using a dictionary.csv', 'a') as f:
     carbazole_data_frame.to_csv(f, header=False, index=False)
     
-
-
-# In[3]:
-
 
 # Molecules 45000 - 49000
 from rdkit import Chem
@@ -376,11 +367,4 @@ carbazole_data_frame = data_frame[data_frame['SMILES'].isin(carbazole_list)]
 
 with open('carbazole derivatives from using a dictionary.csv', 'a') as f:
     carbazole_data_frame.to_csv(f, header=False, index=False)
-    
-
-
-# In[ ]:
-
-
-
-
+  
