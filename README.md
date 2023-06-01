@@ -18,10 +18,15 @@ Thus, this thesis has been successful in analysing a database of organic semicon
 References (Royal Society of Chemistry format):
 
 F. J. Hernández and R. Crespo-Otero, J. Mater. Chem. C, 2021, 9, 11882–11892
+
 O. Omar, T. Nematiaram, A. Troisi and D. Padula, Organic Materials Repurposing, https://datacat.liverpool.ac.uk/1472/, (accessed May 2023)
+
 Q. Sun, J. Ren, Q. Peng, Z Shuai, 2021, Research Square: https://assets.researchsquare.com/files/rs2520159/v1/d16e6bd7d2c450c8db398934.pdf?c=1676443353 (accessed May 2023)
+
 T. King, S. Butcher and L. Zalewski, DOI:10.5281/ZENODO.438045
+
 Q. Wang and H. Aziz, Appl. Phys. Lett., 2014, 105, 053304
+
 C. Chen, Z. Chi, K. C. Chong, A. S. Batsanov, Z. Yang, Z. Mao, Z. Yang and B. Liu, Nat. Mater., 2021, 20, 175–180
 
 
